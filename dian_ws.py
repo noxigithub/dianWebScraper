@@ -1,6 +1,7 @@
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 import pandas as pd
+import time
 
 
 def get_clients(clients):
@@ -14,7 +15,7 @@ def get_clients(clients):
     for id_client in clients:
         with sync_playwright() as p:
             
-            browser= p.chromium.launch()
+            browser= p.chromium.launch(headless=False, slow_mo=50)
             page= browser.new_page()
             url= 'https://muisca.dian.gov.co/WebRutMuisca/DefConsultaEstadoRUT.faces'
             page.goto(url)
@@ -27,7 +28,7 @@ def get_clients(clients):
             
             
             try:
-                page.locator('#vistaConsultaEstadoRUT\:formConsultaEstadoRUT\:primerNombre').is_visible()
+                page.wait_for_selector('#vistaConsultaEstadoRUT\:formConsultaEstadoRUT\:primerNombre', timeout=50)
                 name1= page.locator('#vistaConsultaEstadoRUT\:formConsultaEstadoRUT\:primerNombre').inner_text()
                 name2= page.locator('#vistaConsultaEstadoRUT\:formConsultaEstadoRUT\:otrosNombres').inner_text()
                 lastn1= page.locator('#vistaConsultaEstadoRUT\:formConsultaEstadoRUT\:primerApellido').inner_text()
@@ -39,23 +40,14 @@ def get_clients(clients):
                 client_data['SEGUNDO APELLIDO'].append(lastn2)
                 
             except:
+                #page.wait_for_selector('#divMensaje')
                 client_data['PRIMER NOMBRE'].append('NA')
                 client_data['OTROS NOMBRES'].append('NA')
                 client_data['PRIMER APELLIDO'].append('NA')
                 client_data['SEGUNDO APELLIDO'].append('NA')
                 print('Error en la transmición')
-                browser.close
-            
-
-
-            
-                    
-            
                 
-                
-            
-                
-    #print(client_data)        
+        time.sleep(2)
     return(client_data)
     
     
