@@ -22,10 +22,21 @@ def index():
     return render_template('index.html')
 
 
-@main.route('/profile')
-@login_required
-def profile():
-    return render_template('profile.html', name=current_user.name)
+@main.route('/aboutus')
+def aboutus():
+    return render_template('about-us.html')
+
+
+@main.route('/apps')
+def apps():
+    return render_template('apps.html')
+
+
+@main.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+
 
 @main.route("/uploadFile", methods=["GET"])
 @login_required

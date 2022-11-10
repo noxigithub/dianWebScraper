@@ -1,0 +1,55 @@
+:root {
+    --main-bg-color: rgb(137,195,180);
+    --mainSecondary-bg-color:rgb(1,31,29);
+    --second-bg-color: rgb(215,253,254);
+    --thirth-bg-color: rgb(181,252,248);
+    --subTitles-color:rgb(164,250,247);
+}
+*{
+    font-family: Roboto;
+}
+
+.mainColorBg{
+    background-color: var(--main-bg-color);
+}
+
+.secondColorBg{
+    background-color: var(--second-bg-color);
+}
+
+.thirdColorBg{
+    background-color: var(--thirth-bg-color);
+}
+
+.roundedCorners{
+    border-radius: 15px;
+}
+.subtitlesbg-color{
+    color:var(--subTitles-color);
+}
+#navbarMenuHeroA .navbar-start a{
+    font-weight: bold;
+    color: rgb(56, 148, 125);
+}
+
+.container-fullwidth{
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.halfColorBg{
+    background-color: var(--second-bg-color); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom, var(--second-bg-color) 0%, var(--second-bg-color) 50%, var(--mainSecondary-bg-color) 50%, var(--mainSecondary-bg-color) 100%);
+
+}
+
+.dianOptionsBoxes{
+    background-color: rgb(0, 119, 91);
+    border-radius: 10px;
+}
+
+.contactSection{
+    background-color: var(--mainSecondary-bg-color);
+}
+

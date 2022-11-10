@@ -1,10 +1,169 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  Flask Login Example
-</h1>
-<h2 class="subtitle">
-  Easy authentication and authorization in Flask.
-</h2>
+<div class="container-fullwidth secondColorBg ">
+  <div class="columns">
+    <div class=" column is-4 is-offset-1 mt-6 has-text-left ">
+      <h1 class="title">
+        DIAN Web Scrapper
+      </h1>
+    </div>
+  </div>
+  <div class="columns ">
+    <div class="column is-10 is-offset-1 mt-2 thirdColorBg roundedCorners ">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam labore earum voluptate
+        molestiae nesciunt laudantium ipsa nobis soluta! Laboriosam suscipit dolorum et quasi nihil voluptatibus hic
+        deleniti nam accusantium eveniet!</p>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column is-4 is-offset-4 mt-5 mb-5">
+      <button class="button is-primary">Mira la guia de uso aquí</button>
+    </div>
+  </div>
+
+  <div class="columns halfColorBg">
+    <div class="column is-10 is-offset-1 has-background-grey-lighter roundedCorners">
+      <div class="columns  is-variable is-4 ">
+        <div class="column is-4 is-offset-1 mt-6 mb-6 dianOptionsBoxes has-text-white">
+          <h2 class="title is-4 mt-4 subtitlesbg-color">Consulta Multiple</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit aperiam labore nulla a exercitationem,
+            reprehenderit inventore eligendi beatae sapiente atque enim incidunt quidem tempora iure cumque, natus, ea
+            optio
+            perferendis!
+          </p>
+
+          <button class="button is-block is-fullwidth"> <a href="{{ url_for('main.uploadFile') }}"
+              >
+              Cargar Archivo de Excel(.xlsx)
+            </a></button>
+
+
+        </div>
+
+        <div class="column is-4 is-offset-2 mt-6 mb-6 dianOptionsBoxes has-text-white">
+          <h2 class="title is-4 mt-4 subtitlesbg-color">Consulta Unitaria</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit aperiam labore nulla a exercitationem,
+
+            perferendis <br><br>
+            Consulte aquí su documento
+          </p>
+          <input type="text" placeholder="# documento">
+
+          <p class="mt-4">Tambíen puede consultarlo diractamente desde la pagina de la DIAN:<br>
+            <a href="">Consultar en la DIAN</a>
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="columns contactSection  has-text-white">
+    <div class="column is-4 is-offset-1 mt-6 mb-6">
+      <p><span class="subtitlesbg-color">Subscribete</span> si quieres estar al tanto de nuestros ultimos desarrollos y
+        actualizaciones.</p>
+      <div class="column is-10 is-offset-1">
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label  has-text-white  ">Nombre</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input class="input is-info" type="text" placeholder="e.g. Partnership opportunity">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="column is-10 is-offset-1">
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label has-text-white ">E-mail</label>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input class="input is-info" type="text" placeholder="e.g. Partnership opportunity">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column is-4 is-offset-2 mt-6 mb-6 has-text-left">
+      <h2 class="title subtitlesbg-color">Contacto:</h2>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label has-text-white ">Nombre</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input is-info" type="text" placeholder="e.g. Partnership opportunity">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label has-text-white ">Asunto</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input is-info" type="text" placeholder="e.g. Partnership opportunity">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label has-text-white ">Celular</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input is-info" type="text" placeholder="e.g. Partnership opportunity">
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label has-text-white ">E-mail</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <input class="input is-info" type="text" placeholder="e.g. Partnership opportunity">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</div>
+
+
 {% endblock %}
