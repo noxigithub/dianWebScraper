@@ -18,6 +18,7 @@ def login_post():
     email = request.form.get('email')
     password = request.form.get('password')
     remember = True if request.form.get('remember') else False
+    print("DATOS DEL LOGIN" + email + password)
 
     user = User.query.filter_by(email=email).first()
 
@@ -45,6 +46,7 @@ def signup_post():
     email = request.form.get('email')
     name = request.form.get('name')
     password = request.form.get('password')
+    rol = 'admin'
 
     user = User.query.filter_by(email=email).first() # if this returns a user, then the email already exists in database
 
@@ -53,7 +55,7 @@ def signup_post():
         return redirect(url_for('auth.signup'))
 
     # create a new user with the form data. Hash the password so the plaintext version isn't saved.
-    new_user = User(email=email, name=name, password=generate_password_hash(password, method='sha256'))
+    new_user = User(email=email, name=name, password=generate_password_hash(password, method='sha256'), rol=rol)
 
     # add the new user to the database
     db.session.add(new_user)
