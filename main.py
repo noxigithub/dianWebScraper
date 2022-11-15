@@ -4,7 +4,7 @@ from flask_login import current_user, login_required
 from werkzeug.utils import secure_filename
 from playwright.sync_api import sync_playwright
 import pandas as pd
-from . import db, UPLOAD_FOLDER
+from app import db, UPLOAD_FOLDER
 import time
 #import numpy as np
 
