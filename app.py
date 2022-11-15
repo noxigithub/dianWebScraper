@@ -17,8 +17,9 @@ app.config['SECRET_KEY'] = 'secret-key'
 #       'sqlite:///' + os.path.join(basedir, 'database.db')
 
 #Localhost uri
-app.config['SQLALCHEMY_DATABASE_URI'] ='mysql+pymysql://juanseAdmin:52fa33f66@localhost:3307/dianProject'
+#app.config['SQLALCHEMY_DATABASE_URI'] ='mysql+pymysql://juanseAdmin:52fa33f66@localhost:3307/dianProject'
 
+app.config['SQLALCHEMY_DATABASE_URI'] =  'postgresql://root:j5AwLAk8n6lZPmluq7EMkGP0o18PZvCw@dpg-cdpurq82i3mjaloc3u5g-a:5432/dianproject'
 #online Uri
 #app.config['SQLALCHEMY_DATABASE_URI'] ='mysql+pymysql://root:4Nnc5YHjofY18CBNN2or@containers-us-west-112.railway.app:6147/railway'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
