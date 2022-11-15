@@ -17,10 +17,10 @@ app.config['SECRET_KEY'] = 'secret-key'
 #       'sqlite:///' + os.path.join(basedir, 'database.db')
 
 #Localhost uri
-#app.config['SQLALCHEMY_DATABASE_URI'] ='mysql+pymysql://juanseAdmin:52fa33f66@localhost:3307/dianProject'
+app.config['SQLALCHEMY_DATABASE_URI'] ='mysql+pymysql://juanseAdmin:52fa33f66@localhost:3307/dianProject'
 
 #online Uri
-app.config['SQLALCHEMY_DATABASE_URI'] ='mysql+pymysql://root:4Nnc5YHjofY18CBNN2or@containers-us-west-112.railway.app:6147/railway'
+#app.config['SQLALCHEMY_DATABASE_URI'] ='mysql+pymysql://root:4Nnc5YHjofY18CBNN2or@containers-us-west-112.railway.app:6147/railway'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['TEMPLATES_AUTO_RELOAD'] = True
