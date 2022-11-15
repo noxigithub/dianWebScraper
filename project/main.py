@@ -6,7 +6,7 @@ from playwright.sync_api import sync_playwright
 import pandas as pd
 from . import db, UPLOAD_FOLDER
 import time
-import numpy as np
+#import numpy as np
 
 
 ALLOWED_EXTENSIONS = {'xlsx'}
@@ -49,7 +49,7 @@ def downloadFile():
     path= os.path.join(UPLOAD_FOLDER,"Updated_file.xlsx" )
     return send_file(path, as_attachment=True)
 
-
+"""
 @main.route("/prueba")
 @login_required
 def prueba():
@@ -70,7 +70,7 @@ def prueba():
     return render_template('index.html')
 
 
-
+"""
 @main.route("/uploadFile", methods=["POST"])
 @login_required
 def uploadFile():
