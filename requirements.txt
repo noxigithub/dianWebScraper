@@ -13,6 +13,7 @@ MarkupSafe==2.1.1
 openpyxl==3.0.10
 pandas==1.5.1
 playwright==1.27.1
+psycopg2==2.9.5
 pyee==8.1.0
 PyMySQL==1.0.2
 python-dateutil==2.8.2
