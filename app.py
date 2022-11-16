@@ -36,7 +36,6 @@ login_manager.login_view = 'auth.login'
 from models import User
 
 db.create_all()
-db.session.commit()
 
 @login_manager.user_loader
 def load_user(user_id):
