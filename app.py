@@ -7,7 +7,7 @@ from flask_cors import CORS
 
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-UPLOAD_FOLDER = os.path.join(basedir + '\\excelFiles')
+UPLOAD_FOLDER = os.path.join(basedir + '/excelFiles')
 
 
 app = Flask(__name__)
